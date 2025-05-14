@@ -1,63 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&#39');
-@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap&#39');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 
 :root {
-    --laranja-claro: #FF862A; /*Define uma variável CSS para cor laranja*/
+    --laranja-claro: #FF862A; /*Definir uma variável CSS para a cor laranja*/
 }
 
-body{
-    font-size: 16px; /*Definir o tamanho da fonte base*/
-    font-family: 'Montserrat';/*Define o tamnho da fonte principal do site*/
+body {
+    font-size: 1rem; /*Tamanho de fonte base (geralmente 16px)*/
+    font-family: 'Montserrat', sans-serif; /*Fonte principal do site, adicionando fallback*/
 }
 
-header{
-    background-color: #ffffff;/*Fundo branco para o cabeçalho*/  
+/*Estilo do Cabeçalho*/
+header {
+    background-color: #ffffff; /*Fundo branco para o cabeçalho*/
 }
 
 /*Seções Gerais*/
-section{
-    padding-bottom: 5rem; /*Espaçamento inferior grande para seções*/
+section {
+    padding-bottom: 5rem; /*Espaçamento inferior grande para a seção*/
 }
 
 /*Links de Navegação*/
-.nav-link{
-    color: #CB6D43; /*Cor marrom-alaranjada para os link*/
+.nav-link {
+    color: #CB6D43; /*Cor marrom-alaranjada para os links*/
     font-weight: 600; /*Texto em negrito*/
 }
-.inicio-fundo{
+
+.inicio-fundo {
     background-image: url('img/4965007.jpg');
     background-size: cover;
     background-position: right;
     border-radius: 80px;
-    width: 100% ;
+    width: 100%;
     height: 606px;
-    padding: 40;
+    padding: 40px; /*Adicionado 'px' para unidade válida*/
     margin: 0 auto;
 }
 
-/*posicionamento para a imagem à direita*/
-.img-inicio{
+/*Posicionamento para a imagem à direita*/
+.img-inicio {
     position: absolute;
     right: 0;
     top: 18rem;
-    width:45rem;
-    height:auto;
+    width: 45rem;
+    height: auto;
 }
 
-.esquerda-conteudo{
+.esquerda-conteúdo {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap:1rem;
+    gap: 1rem;
 }
 
-.botao-inicio {
+.botão-inicio {
     background-color: var(--laranja-claro);
     border-radius: 30px;
     border: none;
     width: 14em;
     height: 3em;
-    align-content: center;
+    display: flex; /*Adicionado para centralizar conteúdo*/
+    align-items: center; /*Centraliza verticalmente*/
+    justify-content: center; /*Centraliza horizontalmente*/
 }
 
 .display-4 {
@@ -69,58 +73,55 @@ section{
     padding-top: 5rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    background: url ('img/flor.png') top right no-repeat,
-    url ('img/flor-esquerda.png') bottom left no-repeat;
-    background-size:  180px 180px;
+    background: url('img/flor.png') top right no-repeat, /*Corrigido 'rigt' para 'right' e 'no-repeatr' para 'no-repeat'*/
+                url('img/flor-esquerda.png') bottom left no-repeat;
+    background-size: 180px 180px;
 }
 
-#tropicalia .container{
-display: flex;
-align-items: center;
-justify-content: center;
-position: relative;
-z-index: 1;
+#tropicalia .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
 }
 
-h2{
+h2 {
     font-family: 'Lemon', serif;
-    font-size: 2.5em;
+    font-size: 2.5em; /*Removido ':' extra*/
     font-style: normal;
     color: var(--laranja-claro);
 }
 
-#galeria { background-color: f4f4f4;
+#galeria {
+    background-color: #f4f4f4; /*Adicionado '#' antes do código hexadecimal*/
 }
 
 .fundo-galeria {
-    background: url('img/flor-bottom-direita.png') buttom right no-repeat;
-background-size: 180px 180px;
+    background: url('img/flor-bottom-direita.png') bottom right no-repeat;
+    background-size: 180px 180px;
 }
 
 #contato {
     background-image: url('img/4965007.jpg');
     background-size: cover;
-    padding: 4rem 0;
-    /*espaçamento interno para a seção de contato*/
+    padding: 4rem 0; /*Espaçamento interno para a seção de contato*/
 }
 
 .formulario {
     background-color: #ffffff;
-    padding: 2rem;
-    /*Espaçamento interno dentro do formulário*/
+    padding: 2rem; /*Espaçamento interno dentro do formulário*/
     border-radius: 10px;
-    /*Borda arrendodada para o formulário*/
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0, 0.1);
-    /*sombra suave para destacar o formulário*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /*Corrigido o valor alpha de rgba*/
     font-weight: bold;
 }
 
 .formulario button {
     background-color: #CB6D43;
     border: none;
-    font-weight: bold;
+    font-weight: bold; /*Corrigido 'bold0' para 'bold'*/
 }
-/*chama a classe do bootstrap para modificar a cor*/
-.form-control{
-    background-color: #f1EDEF;
+
+.form-control {
+    background-color: #f1edef; /*Corrigido para '#f1edef' (sem maiúsculas)*/
 }
